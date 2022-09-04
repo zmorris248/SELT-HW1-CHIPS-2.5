@@ -7,15 +7,45 @@
 =======
 
 def sum arr
-  # YOUR CODE HERE
+  @s = 0
+  arr.each do |i|
+    @s += i
+  end
+  @s;
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  @num1
+  @num2 
+
+  if arr.empty? == true
+    return 0
+  elsif arr.length == 1
+    return arr[0]
+  end
+
+  @num1 = arr.max
+  
+  arr.delete_at(arr.index(@num1))
+
+  @num2 = arr.max
+  
+  arr.append(@num1)
+
+  @num1 + @num2;
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  /arr.each do |i|
+    @num1 = i
+    arr.delete_at(arr.index(i))
+    arr.each do |j|
+      if (@num1 + j) == n
+        return true
+      end
+    arr.append(i)
+  end
+  return false/
 end
 >>>>>>> 0eedd870e5fc03e6bd83de9391a6d8844ebc8deb
 
