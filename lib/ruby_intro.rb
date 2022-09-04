@@ -39,8 +39,8 @@ def sum_to_n? arr, n
       if (@num1 + j) == n
         return true
       end
-    /arr.append(i)/
     end
+    arr.append(i)
   end
   return false
 end
