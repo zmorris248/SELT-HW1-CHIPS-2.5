@@ -1,10 +1,6 @@
 # When done, submit this entire file to the autograder.
 
 # Part 1
-<<<<<<< HEAD
-# 
-
-=======
 
 def sum arr
   @s = 0
@@ -36,22 +32,23 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  /arr.each do |i|
+  arr.each do |i|
     @num1 = i
     arr.delete_at(arr.index(i))
     arr.each do |j|
       if (@num1 + j) == n
         return true
       end
-    arr.append(i)
+    /arr.append(i)/
+    end
   end
-  return false/
+  return false
 end
->>>>>>> 0eedd870e5fc03e6bd83de9391a6d8844ebc8deb
+
 
 # Part 2
 
-def hello(name)
+/def hello(name)
   # YOUR CODE HERE
 end
 
@@ -67,4 +64,4 @@ end
 
 class BookInStock
 # YOUR CODE HERE
-end
+end/
