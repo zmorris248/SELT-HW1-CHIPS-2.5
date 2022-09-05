@@ -48,12 +48,18 @@ end
 
 # Part 2
 
-/def hello(name)
-  # YOUR CODE HERE
+def hello(name)
+  return "Hello, "+name;
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  allLetters = /[a-zA-z]/
+  vowels = /[aeiouAEIOU]/
+  if s.empty?
+    return false
+  else
+    return (s[0].match(allLetters) and !s[0].match(vowels))
+  end
 end
 
 def binary_multiple_of_4? s
@@ -64,4 +70,4 @@ end
 
 class BookInStock
 # YOUR CODE HERE
-end/
+end
