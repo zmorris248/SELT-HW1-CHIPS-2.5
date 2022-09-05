@@ -63,11 +63,53 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s !~ /[^01]/ and !s.empty?
+    if s.to_i(2) % 4 == 0
+      return true
+    else
+      return false
+    end
+  else
+    return false
+  end
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+
+  #constructor
+  def initialize(isbn, price)
+    raise ArgumentError, "ISBN Empty" if isbn.empty?
+    @isbn = isbn
+    raise ArgumentError, "Invalid Price" if price <= 0
+    @price = price
+  end
+
+  #getter
+  def isbn
+    @isbn
+  end
+
+  #getter
+  def price
+    @price
+  end
+
+  #setter
+  def isbn=(new_ISBN)
+    raise ArgumentError, "ISBN Empty" if isbn.empty?
+    @isbn = new_ISBN
+  end
+
+  #setter
+  def price=(new_price)
+    raise ArgumentError, "Invalid Price" if price <= 0
+    @price = new_price
+  end
+
+  def price_as_string
+    return '$' + '%.2f' % @price
+  end
+
 end
